@@ -1,0 +1,191 @@
+.signIn__wrapper {
+  text-align: center;
+
+  border-radius: 5%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0px 0px 21px 3px $accent-text-cl;
+  background-image: linear-gradient(
+      to right,
+      $background-header-cl,
+      $background-header-cl
+    ),
+    url(../images/header/home-bg/home-mobile-bg-pg2.jpg);
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        $background-header-cl,
+        $background-header-cl
+      ),
+      url(../images/header/home-bg/home-mobile-bg-pg2-@2x.jpg);
+  }
+  padding: 10px;
+  margin: 10px;
+  @media screen and (min-width: $tablet) {
+    padding: 40px;
+    width: 450px;
+  }
+}
+
+.signIn__form {
+  display: flex;
+  flex-direction: column;
+}
+.signIn-form__title {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1.17;
+  color: $white-text-cl;
+  margin-bottom: 20px;
+  @media screen and (min-width: $tablet) {
+    font-size: 32px;
+    margin-bottom: 28px;
+  }
+}
+.signIn-form__lable {
+  margin-bottom: 20px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 20px;
+  }
+}
+.signIn-form__input {
+  line-height: 30px;
+  padding: 10px 16px;
+
+  position: relative;
+  width: 100%;
+
+  color: $white-text-cl;
+  background-color: transparent;
+  border: transparent;
+  border-bottom: 0.5px solid $white-text-cl;
+  transition: border-bottom $cubic;
+  outline: none;
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid $accent-text-cl;
+  }
+  &:hover::placeholder,
+  &:focus::placeholder {
+    color: $accent-text-cl;
+  }
+  @media screen and (min-width: $tablet) {
+    height: 50px;
+    line-height: 50px;
+  }
+
+  &::placeholder {
+    font-size: 20px;
+    color: $white-text-cl;
+    transition: border-bottom $cubic;
+  }
+}
+.signIn-form__button {
+  cursor: pointer;
+  padding: 13px 0 13px 0;
+  margin-bottom: 15px;
+
+  font-size: 16px;
+  line-height: 1.33;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $white-text-cl;
+
+  background: $warning-text-cl;
+  border: none;
+  border-radius: 5px;
+  transform: scale(1);
+  transition: box-shadow $cubic, border $cubic, transform $cubic;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 0px 21px 3px $warning-text-cl;
+    transform: scale(0.9);
+  }
+}
+
+.signIn-form__text {
+  color: $white-text-cl;
+  font-style: 12px;
+  margin-bottom: 15px;
+  text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 20px;
+    font-weight: 400;
+  }
+}
+.header__nav-signIn {
+  display: none;
+  @media screen and (min-width: $tablet) {
+    display: block;
+  }
+}
+
+.signUp__button {
+  margin: 0;
+
+  padding: 13px 0 13px 0;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.33;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: $white-text-cl;
+  background-color: transparent;
+  border: 1px solid $white-text-cl;
+  border-radius: 5px;
+  transform: scale(1);
+  transition: transform $cubic, box-shadow $cubic, border $cubic,
+    background-color $cubic;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    transform: scale(0.9);
+    background-color: $background-accent-cl;
+    border: 1px solid $background-accent-cl;
+    box-shadow: 0px 8px 43px rgba(255, 107, 1, 0.6);
+  }
+}
+
+.signIn-form__forgott-pass {
+  padding: 13px 0 13px 0;
+  margin-bottom: 35px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.33;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: $white-text-cl;
+  background-color: transparent;
+  border: 1px solid $white-text-cl;
+  border-radius: 5px;
+  transform: scale(1);
+  transition: transform $cubic, box-shadow $cubic, border $cubic,
+    background-color $cubic;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    transform: scale(0.9);
+    background-color: $background-accent-cl;
+    border: 1px solid $background-accent-cl;
+    box-shadow: 0px 8px 43px $warning-text-cl;
+  }
+}
+
+.basicLightbox__placeholder {
+  @media screen and (max-width: 319px) {
+    width: 100%;
+  }
+  
+}
