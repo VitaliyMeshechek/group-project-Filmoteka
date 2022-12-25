@@ -1,0 +1,11 @@
+.library-movies {
+  padding-bottom: 200px;
+
+  @media screen and (min-width: $tablet) {
+    padding-bottom: 150px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 130px;
+  }
+}

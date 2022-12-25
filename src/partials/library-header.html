@@ -1,0 +1,62 @@
+<header class="header header__library">
+  <div class="container">
+    <nav class="header__nav">
+      <a class="logo" href="/src/index.html">
+        <svg class="logo__icon" width="24px" height="24px">
+          <use href="./images/svg/icons.svg#icon-film"></use>
+        </svg>
+        <h2 class="logo__title">Filmoteka</h2>
+      </a>
+      <ul class="header__nav-list">
+        <li class="header__nav-item">
+          <a href="/src/index.html" class="header__nav-link">Home</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="/src/library.html" class="header__nav-link active"
+            >My library</a
+          >
+        </li>
+        <!-- SIGN-IN -->
+        <li class="header__nav-item">
+          <button type="button" class="sign-in__button">
+            <span class="header__nav-signIn">Sign in</span>
+            <svg
+              id="icon-signin"
+              class="sign-in__icon"
+              width="24px"
+              height="24px"
+            >
+              <use href="./images/svg/icons.svg#icon-user"></use>
+            </svg>
+            <svg
+              id="icon-logout"
+              class="sign-in__icon sign-in__icon--logout"
+              width="24px"
+              height="24px"
+            >
+              <use href="./images/svg/icons.svg#icon-logout"></use>
+            </svg>
+          </button>
+        </li>
+
+        <!--  -->
+      </ul>
+    </nav>
+    <ul class="library__btns">
+      <li class="library__btns-item">
+        <button
+          class="library__btns-btn library__btns-btn--active"
+          type="button"
+          data-add="watchedMB"
+        >
+          Watched
+        </button>
+      </li>
+      <li class="library__btns-item">
+        <button class="library__btns-btn" type="button" data-add="queueMB">
+          Queue
+        </button>
+      </li>
+    </ul>
+  </div>
+</header>
