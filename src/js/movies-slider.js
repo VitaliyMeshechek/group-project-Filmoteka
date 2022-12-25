@@ -1,5 +1,5 @@
 // export { refs };
-import { options, glide } from './slider-glide';
+import { options, glide } from './glide-slider';
 import Glide from '@glidejs/glide';
 import {searchIdforMovie} from './modalMoviesCard';
 import { getPopularMovies } from '../api-services/movies-api-service';
@@ -15,27 +15,27 @@ const sliderList = document.querySelector('.glide__slides');
 const BASE_URL = 'https://api.themoviedb.org/3/';
 const API_KEY = 'f983fc840eb543faba07dcbe6db19b0b';
 
-// class MoviesApiService {
-//   constructor() {
-//     this.page = 1;
-//     this.searchQuery = '';
-//     this.lang = '';
-//     this.genre = '';
-//     this.year = '';
-//     this.originalLanguage = '';
-//   }
-//   async getTrendFilms() {
-//     try {
-//       const url = `${BASE_URL}trending/movie/week?api_key=${API_KEY}&language=${this.lang}`;
-//       const response = await axios.get(url);
-//       return response.data;
-//     } catch (error) {
-//       Notify.failure('Oops, an error occurred');
-//     }
-//   }
-// }
+class MoviesApiService {
+  constructor() {
+    this.page = 1;
+    this.searchQuery = '';
+    this.lang = '';
+    this.genre = '';
+    this.year = '';
+    this.originalLanguage = '';
+  }
+  async getTrendFilms() {
+    try {
+      const url = `${BASE_URL}trending/movie/week?api_key=${API_KEY}&language=${this.lang}`;
+      const response = await axios.get(url);
+      return response.data;
+    } catch (error) {
+      Notify.failure('Oops, an error occurred');
+    }
+  }
+}
 
-// const moviesApiService = new MoviesApiService();
+const moviesApiService = new MoviesApiService();
 
 
 renderSliderMovies()
@@ -72,7 +72,7 @@ renderSliderMovies()
 //   </div>`
 //   });
 
-//   // refs.moviesContainer.insertAdjacentHTML('beforeend', markup);
+  refs.moviesContainer.insertAdjacentHTML('beforeend', markup);
 
 //   let arrFilmTrends = [];
 // results.map(item => {
